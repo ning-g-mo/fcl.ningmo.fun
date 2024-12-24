@@ -1,4 +1,4 @@
-import browser from './lib/browser.min.mjs';
+import browser from './lib/browser.min.js';
 import {Fancybox} from './lib/fancybox/fancybox.esm.js';
 
 window.ENV = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')? 'dev': 'prod';
