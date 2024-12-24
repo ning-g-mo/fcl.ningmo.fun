@@ -87,17 +87,17 @@ let ghProxyUrl = '';
 // 下载源配置
 const downloadUrls = {
     all: {
-        direct: 'https://fcl.ningmo.fun/d/FCL-release-1.1.9.5-all.apk',
+        direct: 'https://fcl.asia/d/FCL-release-1.1.9.5-all.apk',
         '123': 'https://www.123684.com/s/zcTSVv-sGFO3',
         'github': `${ghProxyUrl}https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.9.5/FCL-release-1.1.9.5-all.apk`
     },
     arm64: {
-        direct: 'https://fcl.ningmo.fun/d/FCL-release-1.1.9.5-arm64-v8a.apk',
+        direct: 'https://fcl.asia/d/FCL-release-1.1.9.5-arm64-v8a.apk',
         '123': 'https://www.123684.com/s/zcTSVv-sGFO3',
         'github': `${ghProxyUrl}https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.9.5/FCL-release-1.1.9.5-arm64-v8a.apk`
     },
     x86: {
-        direct: 'https://fcl.ningmo.fun/d/FCL-release-1.1.9.5-x86.apk',
+        direct: 'https://fcl.asia/d/FCL-release-1.1.9.5-x86.apk',
         '123': 'https://www.123684.com/s/zcTSVv-sGFO3',
         'github': `${ghProxyUrl}https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.9.5/FCL-release-1.1.9.5-x86.apk`
     }
