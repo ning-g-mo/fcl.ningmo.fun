@@ -223,7 +223,7 @@ async function loadPlugins() {
             data.plugins.forEach(plugin => {
                 const latestVersion = plugin.versions.find(v => v.isLatest) || plugin.versions[0];
                 
-                // 使用默认图标（如果图标链接无效）
+                // 优先使用 JSON 中的图标，如果没有则使用默认图标
                 const defaultIcon = 'assets/images/logo.png';
                 const iconUrl = plugin.icon || defaultIcon;
                 

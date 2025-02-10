@@ -4,7 +4,7 @@
       "id": "MobileGlues",
       "name": "MobileGlues",
       "description": "MobileGlues是目前地标最强渲染器！",
-      "icon": "https://fcl.ningmo.fun/assets/images/plugings/mobileglues.png",
+      "icon": "https://fcl.ningmo.fun/assets/images/plugins/mobileglues.png",
       "size": "5 MB",
       "versions": 
       [
@@ -26,7 +26,7 @@
       "id": "Krypton Wrapper ",
       "name": "Krypton Wrapper ",
       "description": "Krypton Wrapper (也叫做 Next Generation GL4ES / NG-GL4ES) 是一个基于 gl4es 和 gl4es-114-extra 的项目。\n此项目支持更多的 OpenGL 函数并修复原项目的部分漏洞。",
-      "icon": "https://fcl.ningmo.fun/assets/images/plugings/kw.png",
+      "icon": "https://fcl.ningmo.fun/assets/images/plugins/kw.png",
       "size": "5 MB",
       "versions": 
       [
