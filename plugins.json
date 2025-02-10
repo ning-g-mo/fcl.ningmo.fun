@@ -1,0 +1,34 @@
+{
+  "plugins": [
+    {
+      "id": "renderer",
+      "name": "渲染器插件包",
+      "description": "包含老版holy，新版holy，gl4esplus，ltw，ltw.new,angle等渲染器",
+      "icon": "https://raw.githubusercontent.com/your-repo/icons/renderer.png",
+      "size": "24 MB",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2024-01-20",
+          "url": "https://fcl.ningmo.fun/d/fcl渲染器插件.zip",
+          "isLatest": true
+        }
+      ]
+    },
+    {
+      "id": "drive",
+      "name": "驱动程序包",
+      "description": "包含运行游戏所需的基础驱动程序",
+      "icon": "https://raw.githubusercontent.com/your-repo/icons/driver.png",
+      "size": "28 MB",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2024-01-20",
+          "url": "https://fcl.ningmo.fun/qd/fcl驱动程序包.zip",
+          "isLatest": true
+        }
+      ]
+    }
+  ]
+} 

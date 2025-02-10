@@ -1,0 +1,397 @@
+.plugins-section {
+    padding: 120px 2rem 4rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.plugins-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.plugins-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.plugins-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.plugins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plugin-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plugin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plugin-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    overflow: hidden; /* 防止图片溢出 */
+}
+
+.plugin-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持图片比例 */
+    transition: transform 0.3s ease;
+}
+
+/* 可选：添加悬停效果 */
+.plugin-card:hover .plugin-icon img {
+    transform: scale(1.1);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .plugin-icon svg {
+    color: #E2E8F0;
+}
+
+.plugin-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.plugin-info h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.plugin-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.plugin-meta {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.plugin-versions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.version-select,
+.download-button {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+.version-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+[data-theme="dark"] .version-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23E2E8F0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .plugin-card {
+    background-color: rgba(45, 55, 72, 0.6);
+}
+
+[data-theme="dark"] .version-select {
+    background-color: rgba(45, 55, 72, 0.8);
+    color: #E2E8F0;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .version-select option {
+    background-color: #2D3748;
+    color: #E2E8F0;
+}
+
+[data-theme="dark"] .download-button {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .download-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .plugins-section {
+        padding: 80px 1rem 2rem;
+    }
+
+    .plugins-header h1 {
+        font-size: 2rem;
+    }
+
+    .plugins-header p {
+        font-size: 1rem;
+    }
+
+    .plugins-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .plugin-card {
+        padding: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .plugin-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 2.8rem;
+    }
+
+    .plugin-info {
+        width: 100%;
+    }
+
+    .plugin-meta {
+        justify-content: center;
+    }
+
+    .plugin-versions {
+        padding: 0 1.2rem;
+    }
+
+    .version-select,
+    .download-button {
+        max-width: 220px;
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 添加一些额外的优化 */
+@media (max-width: 480px) {
+    .plugins-grid {
+        gap: 1.2rem;
+    }
+
+    .plugin-card {
+        padding: 1.2rem;
+    }
+
+    .plugin-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.2rem;
+    }
+
+    .plugin-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .plugin-description {
+        font-size: 0.9rem;
+    }
+
+    .plugin-versions {
+        padding: 0 1rem;
+    }
+
+    .version-select,
+    .download-button {
+        max-width: 200px;
+        padding: 0.7rem;
+    }
+}
+
+/* 添加 Safari 支持 */
+@supports (-webkit-backdrop-filter: none) {
+    .plugin-card {
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+/* 优化下拉框在移动端的样式 */
+.version-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+[data-theme="dark"] .version-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23E2E8F0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .plugin-card {
+    background-color: rgba(45, 55, 72, 0.6);
+}
+
+[data-theme="dark"] .version-select {
+    background-color: rgba(45, 55, 72, 0.8);
+    color: #E2E8F0;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .version-select option {
+    background-color: #2D3748;
+    color: #E2E8F0;
+}
+
+[data-theme="dark"] .download-button {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .download-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.loading-spinner i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+/* 添加源选择器样式 */
+.source-selector {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.source-selector select {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+.source-selector select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .source-selector select {
+    background-color: rgba(45, 55, 72, 0.8);
+    color: #E2E8F0;
+}
+
+/* 下载按钮样式 */
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.download-button i {
+    font-size: 1.1rem;
+}
+
+/* 版本选择下拉框样式 */
+.version-select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.version-select option {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+} 

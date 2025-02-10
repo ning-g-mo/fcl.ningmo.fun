@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插件下载 - Fold Craft Launcher</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="下载 Fold Craft Launcher 的插件，包括渲染器和驱动插件">
+    <meta name="keywords" content="Minecraft,我的世界,启动器,Java版,插件,fcl,fcl启动器">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- 顶栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="/"><img src="assets/images/logo.png" alt="fcl" draggable="false"></a>
+            </div>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="/download.html">下载</a>
+                <a href="/plugins.html" class="active">插件</a>
+                <a href="https://docs.ningmo.fun">文档</a>
+                <button class="theme-toggle desktop-only" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-mobile">
+                <button class="theme-toggle mobile-only" title="切换主题">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" title="菜单">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 插件列表区域 -->
+    <section class="plugins-section">
+        <div class="plugins-header">
+            <h1>插件下载</h1>
+            <p>为您的 Fold Craft Launcher 提供更多的渲染器和驱动</p>
+            <div class="source-selector">
+                <select id="data-source" title="选择数据源">
+                    <option value="github">GitHub 源</option>
+                    <option value="gitee">Gitee 源</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="plugins-grid" id="plugins-container">
+            <!-- 插件卡片将通过 JavaScript 动态加载 -->
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>正在加载插件列表...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于</h4>
+                <p>Fold Craft Launcher 是一款适用于安卓平台的 Minecraft: Java Edition 启动器</p>
+            </div>
+            <div class="footer-section">
+                <h4>链接</h4>
+                <a href="/download.html"><i class="fas fa-download"></i> 下载</a>
+                <a href="https://github.com/FCL-Team/FoldCraftLauncher" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> 源代码</a>
+            </div>
+            <div class="footer-section">
+                <h4>社区</h4>
+                <a href="https://github.com/FCL-Team/FoldCraftLauncher/issues" target="_blank" rel="noopener noreferrer"><i class="fas fa-bug"></i> 反馈问题</a>
+                <a href="https://afdian.com/a/tungs" target="_blank" rel="noopener noreferrer"><i class="fas fa-heart"></i> 赞助开发</a>
+                <a href="https://discord.gg/ffhvuXTwyV" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> discord</a>
+            </div>
+            <div class="footer-section">
+                <h4>文档</h4>
+                <a href="https://fcl-team.github.io/pages/documentation.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> 官方文档</a>
+                <a href="https://docs.ningmo.fun" target="_blank" rel="noopener noreferrer"><i class="fas fa-bookmark"></i> 第三方文档(推荐)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 网站版权 <a href="https://ningmo.fun" target="_blank" rel="noopener noreferrer">@柠枺</a> 所有</p>
+            <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">新ICP备2024015133号-2</a>
+        </div>
+    </footer>
+</body>
+</html> 
