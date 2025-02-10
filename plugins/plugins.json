@@ -1,0 +1,63 @@
+{
+  "plugins": [
+    {
+      "id": "MobileGlues",
+      "name": "MobileGlues",
+      "description": "MobileGlues是目前地标最强渲染器！",
+      "icon": "https://fcl.ningmo.fun/assets/images/plugings/mobileglues.png",
+      "size": "5 MB",
+      "versions": 
+      [
+        {
+          "version": "1.0.1",
+          "date": "2025-02-10",
+          "url": "https://fcl.ningmo.fun/plugins/mobileglues-1.0.1.apk",
+          "isLatest": true
+        },
+        {
+          "version": "1.0.0",
+          "date": "2025-02-10",
+          "url": "https://fcl.ningmo.fun/plugins/mobileglues-1.0.0.apk",
+          "isLatest": false
+        }
+      ]
+    },
+    {
+      "id": "Krypton Wrapper ",
+      "name": "Krypton Wrapper ",
+      "description": "Krypton Wrapper (也叫做 Next Generation GL4ES / NG-GL4ES) 是一个基于 gl4es 和 gl4es-114-extra 的项目。\n此项目支持更多的 OpenGL 函数并修复原项目的部分漏洞。",
+      "icon": "https://fcl.ningmo.fun/assets/images/plugings/kw.png",
+      "size": "5 MB",
+      "versions": 
+      [
+        {
+          "version": "NO-ANGLE",
+          "date": "2025-01-26",
+          "url": "https://fcl.ningmo.fun/plugins/app-NO-ANGLE-release.apk",
+          "isLatest": false
+        },
+        {
+          "version": "ANGLE",
+          "date": "2025-01-26",
+          "url": "https://fcl.ningmo.fun/plugins/app-ANGLE-release.apk",
+          "isLatest": false
+        }
+      ]
+      },
+      {
+      "id": "renderer",
+      "name": "渲染器插件包",
+      "description": "包含老版holy，新版holy，gl4esplus，ltw，ltw.new,angle等渲染器",
+      "icon": "https://fcl.ningmo.fun/assets/images/logo.png",
+      "size": "24 MB",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2024-01-20",
+          "url": "https://fcl.ningmo.fun/d/fcl渲染器插件.zip",
+          "isLatest": true
+        }
+      ]
+    }
+  ]
+} 

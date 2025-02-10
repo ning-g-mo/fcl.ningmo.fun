@@ -162,8 +162,8 @@ function initScreenshotSlider() {
 
 // 数据源配置
 const DATA_SOURCES = {
-    github: 'https://raw.githubusercontent.com/ning-g-mo/fclpluginswebdata/main/plugins.json',
-    gitee: 'https://gitee.com/ning-g-mo/fclpluginswebdata/raw/main/plugins.json'
+    plugins: '/plugins/plugins.json',
+    drive: '/plugins/drive.json'
 };
 
 // 修改 loadPlugins 函数
@@ -192,32 +192,7 @@ async function loadPlugins() {
                 }
             }).catch(() => null);
 
-            // 如果主源失败，尝试备用源
-            if (!response || !response.ok) {
-                console.log('主源获取失败，尝试备用源');
-                const backupSource = sourceSelect.value === 'github' ? 'gitee' : 'github';
-                
-                try {
-                    response = await fetch(DATA_SOURCES[backupSource], {
-                        headers: {
-                            'Accept': 'application/json',
-                            'Cache-Control': 'no-cache'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        console.log('备用源获取成功');
-                        sourceSelect.value = backupSource;
-                        localStorage.setItem('preferred-source', backupSource);
-                    } else {
-                        console.error('备用源也失败了');
-                        throw new Error(`两个数据源都无法访问`);
-                    }
-                } catch (backupError) {
-                    console.error('备用源错误:', backupError);
-                    throw new Error(`所有数据源都无法访问: ${backupError.message}`);
-                }
-            }
+
 
             if (!response.ok) {
                 throw new Error(`HTTP 错误! 状态码: ${response.status}`);
@@ -249,7 +224,7 @@ async function loadPlugins() {
                 const latestVersion = plugin.versions.find(v => v.isLatest) || plugin.versions[0];
                 
                 // 使用默认图标（如果图标链接无效）
-                const defaultIcon = 'assets/images/plugins/default.png';
+                const defaultIcon = 'assets/images/logo.png';
                 const iconUrl = plugin.icon || defaultIcon;
                 
                 const card = document.createElement('div');
@@ -309,6 +284,7 @@ async function loadPlugins() {
                     加载插件列表失败: ${error.message}<br>
                     当前数据源: ${sourceSelect.value}<br>
                     请稍后重试
+                    如未选择源，请先选择！
                 </div>
             `;
         }

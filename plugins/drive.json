@@ -1,0 +1,19 @@
+{
+    "plugins": [
+      {
+        "id": "drive",
+        "name": "驱动程序包",
+        "description": "包含部分渲染器必须的驱动程序",
+        "icon": "https://fcl.ningmo.fun/assets/images/logo.png",
+        "size": "28 MB",
+        "versions": [
+          {
+            "version": "1.0.0",
+            "date": "2024-01-20",
+            "url": "https://fcl.ningmo.fun/qd/fcl驱动程序包.zip",
+            "isLatest": true
+          }
+        ]
+      }
+    ]
+}
